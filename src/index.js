@@ -1,6 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
+import data from "./FishEyeData.json"
+import "./assets/scss/app.scss"
+import FishEyeData from "./FishEyeData";
+
+export const fishEyeData = new FishEyeData(data)
 
 ReactDOM.render(
   <React.StrictMode>

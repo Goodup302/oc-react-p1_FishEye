@@ -1,0 +1,19 @@
+.media-tag {
+    margin-right: 5px;
+    div {
+        border: 0.5px solid $grey;
+        box-sizing: border-box;
+        border-radius: 11px;
+        color: $firstColorText;
+        display: inline;
+        font-weight: 500;
+    }
+    span {
+        &:before {
+            content: "#";
+        }
+        font-size: 12px;
+        text-transform: capitalize;
+        padding: 10px 10px;
+    }
+}
