@@ -1,13 +1,16 @@
 import React from "react";
+import {Link} from "react-router-dom";
 
 function Tag(props) {
     const {name} = props
 
-    return <a href="/" className="media-tag sr-only" aria-label={name} itemProp="url">
+    return <Link to={'/tag/'+name} itemProp="url" className="media-tag sr-only" aria-label={name}>
         <div>
             <span>{name}</span>
         </div>
-    </a>
+    </Link>
+
+
 }
 
 export default Tag

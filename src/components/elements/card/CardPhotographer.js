@@ -1,17 +1,20 @@
 import React from "react";
-import Media from "./Media";
-import Tag from "./Tag";
+import Media from "../Media";
+import Tag from "../Tag";
+import {Link} from "react-router-dom";
 
 function CardPhotographer(props) {
     const {photographer} = props
 
     return <div className="card-photographer d-flex flex-column align-items-center">
-        <Media photographer={photographer} />
+        <Link to={"/photographer/"+photographer.id}>
+            <div className="d-flex flex-column align-items-center">
+                <Media photographer={photographer} />
+                <p className="name">{photographer.name}</p>
+            </div>
+        </Link>
 
-        {/*<p className="">{photographer.id}</p>*/}
-
-        <div className="card-photographer-content  d-flex flex-column align-items-center">
-            <p className="name">{photographer.name}</p>
+        <div className="d-flex flex-column align-items-center">
             <p className="location">{photographer.city}, {photographer.country}</p>
             <p className="tagline">{photographer.tagline}</p>
             <p className="price">${photographer.price}/day</p>

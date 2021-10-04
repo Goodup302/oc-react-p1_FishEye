@@ -1,0 +1,23 @@
+.SinglePhotographer {
+    position: relative;
+
+    .row-media {
+        --bs-gutter-x: 48px;
+    }
+
+    .static-informations {
+        position: fixed;
+        bottom: 0;
+        right: 50px;
+        background: $thirdColor;
+        border-radius: 5px 5px 0 0;
+        max-width: 376px;
+        width: -webkit-fill-available;
+
+        span {
+            font-weight: 500;
+            font-size: 24px;
+            color: $black;
+        }
+    }
+}

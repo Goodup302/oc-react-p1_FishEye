@@ -1,0 +1,38 @@
+.card-media {
+    img {
+        height: 300px;
+        width: 100%;
+        border-radius: 5px;
+        object-fit: cover;
+        margin-bottom: 10px;
+        cursor: pointer;
+        transition: .4s;
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+    video {
+        height: 300px;
+        width: 100%;
+        border-radius: 5px;
+        object-fit: cover;
+        margin-bottom: 10px;
+        cursor: pointer;
+        transition: .4s;
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+    p {
+        font-size: 24px;
+        line-height: 31px;
+        color: $firstColor;
+    }
+    .like {
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 31px;
+        text-align: right;
+        color: $firstColor;
+    }
+}

@@ -1,8 +1,8 @@
 import React from "react";
 
-import logoSite from "../../assets/svg/fisheye.svg"
 import {fishEyeData} from "../../index";
 import Tag from "../elements/Tag";
+import FishEyeLogo from "../elements/FishEyeLogo";
 
 function Header(props) {
     const tags = fishEyeData.getAllTags();
@@ -10,7 +10,7 @@ function Header(props) {
     return <header>
         <div className="row mt-10 mb-20">
             <div className="col-md-3 text-center">
-                <img src={logoSite} alt="Logo of website fisheye"/>
+                <FishEyeLogo/>
             </div>
 
             <div className="col-md-6">
