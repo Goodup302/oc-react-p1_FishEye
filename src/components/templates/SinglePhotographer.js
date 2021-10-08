@@ -11,16 +11,15 @@ function SinglePhotographer(props) {
     const photographerId = props.match.params.photographerId
     const photographer = fishEyeData.getPhotographer(photographerId);
     const totlaLikes = fishEyeData.getPhotographerLike(photographerId)
-    console.log(photographer)
 
-    return <div className="SinglePhotographer container ">
+    return <main id="main" className="SinglePhotographer container">
         <div className="row mt-10 mb-20">
             <div className="col-12 mb-8">
                 <FishEyeLogo/>
             </div>
             <EntryPhotographer photographer={photographer}/>
         </div>
-        <div className="row row-media">
+        <div className="row row-media" id="content">
             {fishEyeData.getMediaByPhotographer(photographerId).map((media, i) =>
                 <div key={i} className="col-md-6 col-lg-4 mb-2" >
                     <CardMedia media={media} />
@@ -32,7 +31,7 @@ function SinglePhotographer(props) {
             <span>{totlaLikes} <LikeSVG/></span>
             <span>{photographer.price}$ / Day</span>
         </div>
-    </div>
+    </main>
 }
 
 export default SinglePhotographer

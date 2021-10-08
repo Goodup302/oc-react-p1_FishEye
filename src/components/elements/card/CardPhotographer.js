@@ -10,14 +10,14 @@ function CardPhotographer(props) {
         <Link to={"/photographer/"+photographer.id}>
             <div className="d-flex flex-column align-items-center">
                 <Media photographer={photographer} />
-                <p className="name">{photographer.name}</p>
+                <h2 aria-label={photographer.name} className="name">{photographer.name}</h2>
             </div>
         </Link>
 
         <div className="d-flex flex-column align-items-center">
-            <p className="location">{photographer.city}, {photographer.country}</p>
-            <p className="tagline">{photographer.tagline}</p>
-            <p className="price">${photographer.price}/day</p>
+            <p className="location" tabIndex="0">{photographer.city}, {photographer.country}</p>
+            <p className="tagline" tabIndex="0">{photographer.tagline}</p>
+            <p className="price" tabIndex="0">${photographer.price}/day</p>
 
             <div className="d-flex flex-row align-items-center">
                 {photographer.tags.map((tag, i) => <Tag key={i} name={tag}/>)}

@@ -7,10 +7,11 @@ function Media(props) {
 
     if (photographer) {
         const root = window.location.origin+"/images/photographers_logo/"
+        const title = "Profile picture of photographer "+photographer.name
         return (
             <img className="avatar-photographer"
                  src={root+photographer.portrait}
-                 alt={"Profile picture of photographer "+photographer.name}/>
+                 alt={title}/>
         )
     }
 
