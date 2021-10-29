@@ -1,7 +1,58 @@
 .button {
+    text-transform: capitalize;
+    border: unset;
+    border-radius: 5px;
+    padding: 22px 50px;
+    background: $firstColor;
+    color: $white;
+    font-family: $fontFamily;
+    font-size: 20px;
+    height: fit-content;
+    &.button-second {
+        background: $thirdColor !important;
+        color: $white !important;
+    }
+}
 
+.button-svg {
+    border: unset;
+    background: unset;
 }
 
 select {
 
+}
+
+#contactFormModal {
+    .modal-dialog {
+        min-width: 670px;
+        .modal-content {
+            background: $thirdColor;
+            padding: 35px;
+            border-radius: 5px;
+            border: unset;
+            min-width: 670px;
+        }
+    }
+
+    #contact-form {
+        h1 {
+            font-size: 64px;
+        }
+        label {
+            font-size: 36px;
+        }
+        input,textarea {
+            background: white;
+            border-radius: 5px;
+            border: none;
+            padding: 5px 10px;
+        }
+        input {
+            min-height: 45px;
+        }
+        textarea {
+            min-height: 150px;
+        }
+    }
 }

@@ -5,6 +5,10 @@
         --bs-gutter-x: 48px;
     }
 
+    .media-tag {
+        margin-bottom: 5px;
+    }
+
     .static-informations {
         position: fixed;
         bottom: 0;
@@ -19,5 +23,26 @@
             font-size: 24px;
             color: $black;
         }
+        @include media-breakpoint-down(md) {
+            display: none !important;
+        }
     }
+
+    .button-contact-me {
+        @include media-breakpoint-down(lg) {
+            position: fixed;
+            bottom: 16px;
+            padding: 5px 34px;
+            right: 50%;
+            left: 0;
+            margin: auto;
+            width: fit-content;
+        }
+        @include media-breakpoint-down(md) {
+            right: 0;
+            left: 0;
+            margin: auto;
+        }
+    }
+
 }

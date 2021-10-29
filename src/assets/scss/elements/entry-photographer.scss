@@ -4,17 +4,32 @@
     padding: 56px 50px;
     .name {
         font-size: 64px;
-        line-height: 83px;
         color: $firstColorText;
     }
     .location {
         font-size: 24px;
-        line-height: 31px;
         color: $firstColor;
     }
     .tagline {
         font-size: 18px;
-        line-height: 23px;
         color: $fontColor;
+    }
+    @include media-breakpoint-down(md) {
+        background: none;
+        padding: 0 20px;
+        .name {
+            font-size: 36px;
+            line-height: 1;
+        }
+        .location {
+            font-size: 13px;
+        }
+        .tagline {
+            font-size: 13px;
+        }
+        .avatar-photographer {
+            height: 100px;
+            width: 100px;
+        }
     }
 }

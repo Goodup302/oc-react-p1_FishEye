@@ -5,6 +5,7 @@ import {ReactComponent as LikeSVG} from "../../assets/svg/like.svg";
 import {fishEyeData} from "../../index";
 import EntryPhotographer from "../elements/EntryPhotographer";
 import CardMedia from "../elements/card/CardMedia";
+import ContactFrom from "../elements/popin/ContactForm";
 
 function SinglePhotographer(props) {
 
@@ -13,8 +14,8 @@ function SinglePhotographer(props) {
     const totlaLikes = fishEyeData.getPhotographerLike(photographerId)
 
     return <main id="main" className="SinglePhotographer container">
-        <div className="row mt-10 mb-20">
-            <div className="col-12 mb-8">
+        <div className="row mt-md-10 mb-md-20 mt-5 mb-10">
+            <div className="col-12 mb-8 mx-md-1 mx-2">
                 <FishEyeLogo/>
             </div>
             <EntryPhotographer photographer={photographer}/>
@@ -31,6 +32,8 @@ function SinglePhotographer(props) {
             <span>{totlaLikes} <LikeSVG/></span>
             <span>{photographer.price}$ / Day</span>
         </div>
+
+        <ContactFrom photographer={photographer} />
     </main>
 }
 

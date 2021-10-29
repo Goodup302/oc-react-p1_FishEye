@@ -9,7 +9,7 @@ $link-decoration: none;
 $link-hover-color: unset;
 $link-hover-decoration: none;
 
-$font-family-base: 'Roboto', sans-serif;
+$font-family-base: $fontFamily;
 
 $grid-breakpoints: (
 		xs: 0,
