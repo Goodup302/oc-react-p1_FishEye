@@ -16,7 +16,7 @@ function EntryPhotographer(props) {
         myModal.show()
     }
 
-    return <div className="entry-photographer d-flex justify-content-between">
+    return <div className="entry-photographer d-flex justify-content-between mb-10">
         <div style={{width: '100%'}}>
             <div className="align-items-center d-flex">
                 <p className="name pb-1 pb-md-auto pe-lg-0 pe-lg-10 pe-xl-20">{photographer.name}</p>

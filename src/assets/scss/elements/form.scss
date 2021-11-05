@@ -33,6 +33,14 @@ select {
             border: unset;
             min-width: 670px;
         }
+        @include media-breakpoint-down(md) {
+            min-width: fit-content;
+            .modal-content {
+                min-width: fit-content;
+                padding: 15px;
+                height: 100%;
+            }
+        }
     }
 
     #contact-form {
@@ -53,6 +61,20 @@ select {
         }
         textarea {
             min-height: 150px;
+        }
+        @include media-breakpoint-down(md) {
+            h1 {
+                font-size: 36px;
+            }
+            label {
+                font-size: 24px;
+            }
+            input {
+                min-height: 45px;
+            }
+            .button {
+                padding: 5px 34px;
+            }
         }
     }
 }

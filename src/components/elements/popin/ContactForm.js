@@ -1,6 +1,5 @@
 import React from "react";
-import Modal from "bootstrap/js/src/modal";
-import $ from "jquery";
+
 import {ReactComponent as CloseSVG} from "../../../assets/svg/close.svg";
 
 function ContactFrom(props) {
@@ -11,20 +10,14 @@ function ContactFrom(props) {
 
     function handleClose(e) {
         e.preventDefault();
-
-        // let myModal = new Modal($('#contactFormModal').get(0), {
-        //     // keyboard: false
-        // })
-        // myModal.toggle()
     }
 
     function handleSubmit(e) {
         e.preventDefault();
     }
 
-
     return <div className="modal fade" id="contactFormModal" tabIndex="-1" aria-labelledby="contactFormModalLabel" aria-hidden="true">
-        <div className="modal-dialog modal-dialog-scrollable modal-">
+        <div className="modal-dialog modal-dialog-scrollable">
             <div className="modal-content">
                 <div className="modal-body">
                     <form action="" id="contact-form">
@@ -54,7 +47,9 @@ function ContactFrom(props) {
                             <textarea id="your_message" name="your_message"/>
                         </div>
 
-                        <button className="button mt-5" onClick={handleSubmit}>send</button>
+                        <div className="d-flex justify-content-center justify-content-md-start">
+                            <button className="button button-lite mt-5" onClick={handleSubmit}>send</button>
+                        </div>
                     </form>
                 </div>
             </div>

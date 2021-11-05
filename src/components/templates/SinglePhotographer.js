@@ -1,27 +1,28 @@
 import React from "react";
 import FishEyeLogo from "../elements/FishEyeLogo";
 import {ReactComponent as LikeSVG} from "../../assets/svg/like.svg";
-
 import {fishEyeData} from "../../index";
 import EntryPhotographer from "../elements/EntryPhotographer";
 import CardMedia from "../elements/card/CardMedia";
 import ContactFrom from "../elements/popin/ContactForm";
+import MediaViewer from "../elements/popin/MediaViewer";
 
 function SinglePhotographer(props) {
 
     const photographerId = props.match.params.photographerId
     const photographer = fishEyeData.getPhotographer(photographerId);
     const totlaLikes = fishEyeData.getPhotographerLike(photographerId)
+    const medias = fishEyeData.getMediaByPhotographer(photographerId)
 
     return <main id="main" className="SinglePhotographer container">
-        <div className="row mt-md-10 mb-md-20 mt-5 mb-10">
-            <div className="col-12 mb-8 mx-md-1 mx-2">
+        <div className="row">
+            <div className="col-12 mb-8 mt-6 px-4">
                 <FishEyeLogo/>
             </div>
             <EntryPhotographer photographer={photographer}/>
         </div>
         <div className="row row-media" id="content">
-            {fishEyeData.getMediaByPhotographer(photographerId).map((media, i) =>
+            {medias.map((media, i) =>
                 <div key={i} className="col-md-6 col-lg-4 mb-2" >
                     <CardMedia media={media} />
                 </div>
@@ -34,6 +35,7 @@ function SinglePhotographer(props) {
         </div>
 
         <ContactFrom photographer={photographer} />
+        <MediaViewer data={medias} />
     </main>
 }
 

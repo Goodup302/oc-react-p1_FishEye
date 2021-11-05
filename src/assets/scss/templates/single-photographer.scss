@@ -2,7 +2,7 @@
     position: relative;
 
     .row-media {
-        --bs-gutter-x: 48px;
+        //--bs-gutter-x: 48px;
     }
 
     .media-tag {
@@ -29,6 +29,7 @@
     }
 
     .button-contact-me {
+        z-index: 10;
         @include media-breakpoint-down(lg) {
             position: fixed;
             bottom: 16px;
@@ -44,5 +45,4 @@
             margin: auto;
         }
     }
-
 }
