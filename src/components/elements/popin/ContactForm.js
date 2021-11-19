@@ -3,10 +3,7 @@ import React from "react";
 import {ReactComponent as CloseSVG} from "../../../assets/svg/close.svg";
 
 function ContactFrom(props) {
-
     const photographer = props.photographer
-    console.log(photographer)
-
 
     function handleClose(e) {
         e.preventDefault();

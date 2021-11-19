@@ -2,16 +2,14 @@ import React from "react"
 import PropTypes from 'prop-types';
 import {ReactComponent as LikeSVG} from "../../../assets/svg/like.svg";
 import Media from "../Media";
-import $ from "jquery";
+import {openMedia} from "../popin/MediaViewer";
 
 function CardMedia(props) {
     const {media} = props
 
     function handleClick(e, media) {
         e.preventDefault();
-        const viewer = $('#MediaViewerModal')
-        viewer.addClass('show')
-        viewer.attr('media-id', media.id)
+        openMedia(media)
     }
 
     return <div className="card-media">

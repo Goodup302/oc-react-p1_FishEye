@@ -1,7 +1,7 @@
 import React from "react";
 import FishEyeLogo from "../elements/FishEyeLogo";
 import {ReactComponent as LikeSVG} from "../../assets/svg/like.svg";
-import {fishEyeData} from "../../index";
+import {AppState, fishEyeData} from "../../index";
 import EntryPhotographer from "../elements/EntryPhotographer";
 import CardMedia from "../elements/card/CardMedia";
 import ContactFrom from "../elements/popin/ContactForm";
@@ -13,6 +13,9 @@ function SinglePhotographer(props) {
     const photographer = fishEyeData.getPhotographer(photographerId);
     const totlaLikes = fishEyeData.getPhotographerLike(photographerId)
     const medias = fishEyeData.getMediaByPhotographer(photographerId)
+
+    AppState.setState("photographerId", photographerId)
+    AppState.setState("medias", medias)
 
     return <main id="main" className="SinglePhotographer container">
         <div className="row">

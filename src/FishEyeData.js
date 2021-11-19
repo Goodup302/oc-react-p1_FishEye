@@ -2,7 +2,6 @@ class FishEyeData {
 
     constructor(data) {
         this.data = data;
-        console.log(data)
     }
 
     getAllTags() {
@@ -26,6 +25,7 @@ class FishEyeData {
         }
     }
     getPhotographer(photographeId) {
+        // eslint-disable-next-line eqeqeq
         const result = this.data.photographers.filter(photographer => photographer.id == photographeId)
         if (result) {
             return result[0]
@@ -34,7 +34,17 @@ class FishEyeData {
     }
 
     getMediaByPhotographer(photographeId) {
+        // eslint-disable-next-line eqeqeq
         return this.data.media.filter(media => media.photographerId == photographeId)
+    }
+
+    getMedia(mediaId) {
+        // eslint-disable-next-line eqeqeq
+        const result = this.data.media.filter(media => media.id == mediaId)
+        if (result) {
+            return result[0]
+        }
+        return null
     }
 
     getPhotographerLike(photographeId) {

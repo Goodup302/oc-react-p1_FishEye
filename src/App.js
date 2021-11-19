@@ -3,10 +3,8 @@ import {BrowserRouter, Route, Switch} from "react-router-dom";
 import Home from "./components/templates/Home";
 import NotFound from "./components/templates/NotFound";
 import SinglePhotographer from "./components/templates/SinglePhotographer";
-import $ from "jquery"
 
 function App(props) {
-    console.log(props)
     return (
         <div className="App">
             <div className="print-hidden">
@@ -25,9 +23,3 @@ function App(props) {
 }
 
 export default App;
-
-$('a').on('keyup', function(e) {
-    if( e.which === 9 ) {
-        console.log( e.target.href );
-    }
-});
