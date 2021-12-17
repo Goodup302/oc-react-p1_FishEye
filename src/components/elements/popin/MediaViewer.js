@@ -28,6 +28,7 @@ class MediaViewer extends React.Component{
         this.close = this.close.bind(this)
         this.handleNext = this.handleNext.bind(this)
         this.handlePrev = this.handlePrev.bind(this)
+        this.onChangeMedia = this.onChangeMedia.bind(this)
 
         //Native event
         document.addEventListener('openMedia', this.open, false)
