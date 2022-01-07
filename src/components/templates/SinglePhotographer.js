@@ -5,7 +5,6 @@ import {AppState, fishEyeData} from "../../index";
 import EntryPhotographer from "../elements/EntryPhotographer";
 import CardMedia from "../elements/card/CardMedia";
 import ContactFrom from "../elements/popin/ContactForm";
-import MediaViewer from "../elements/popin/MediaViewer";
 
 function SinglePhotographer(props) {
 
@@ -38,7 +37,6 @@ function SinglePhotographer(props) {
         </div>
 
         <ContactFrom photographer={photographer} />
-        <MediaViewer data={medias} />
     </main>
 }
 
